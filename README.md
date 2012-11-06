@@ -1,7 +1,7 @@
 pyslog
 ======
 
-a python script to append and parse syslog in the format of:
+A python script to append and parse syslog in the format of:
 
 Oct 23 00:23:21 localhost ProgramIdent[3011]: [notice] [operation] blablabla
 
@@ -16,5 +16,6 @@ It's fairly straight forward about its log append part, however the parser part 
 Though there are still some limitations:
 
 1. Not able to parse gzipped log file
-2. works only for log in the format mentioned above
-3. it will ignore logs like "last message repeated x times"
+2. Works only for log in the format mentioned above
+3. It will ignore logs like "last message repeated x times"
+4. Since syslog does not keep track of the year, in order to utilize the time range filter, keep less then one year's log
